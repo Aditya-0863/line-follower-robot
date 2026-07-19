@@ -8,23 +8,29 @@ Follows a black line on a white surface using an IR sensor array.
 Motors adjust speed based on sensor readings to stay centered on the line.
 
 ## Hardware
-- Arduino Uno 
-- IR sensor array 
+- Arduino Uno
+- IR sensor array
 - L298N motor driver
 - 2x DC motors + chassis
 - 7.4V battery pack
 
+## Software
+The base code logic was referred from online resources / tutorials and 
+adapted to match my specific hardware setup. I modified the sensor 
+thresholds, motor PWM values, and pin assignments through experimental 
+tuning.
+
+## What I Changed / Tuned
+- Sensor threshold values for my floor surface and lighting conditions
+- Motor speed constants to match my motor torque and battery voltage
+- Pin configuration to match my wiring layout
+- Added serial debug output to tune the robot live
+
 ## What I Learned
-- How IR sensors detect contrast (black vs white reflectivity)
-- Basic motor control with PWM
-- Why sensor placement and wheel traction matter
-- Debugging hardware vs software issues (loose wires vs bad logic)
+- How IR reflectivity sensors detect contrast (black vs white)
+- Why the same code behaves differently on different hardware
+- The difference between "code works" and "code works on MY robot"
+- Foundation for sensor-based control systems used in later projects
 
-## Code Structure
-- `line_follower.ino` — main logic, sensor reading, motor control
-- [Add your actual files here]
-
-## Notes
-This was a learning project. The logic is simple (threshold-based or basic PID), 
-but it gave me the foundation for the sensor fusion and control systems 
-I used in later projects.
+## Files
+- `` — Main Arduino sketch
