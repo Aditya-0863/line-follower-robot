@@ -1,4 +1,4 @@
-# Line Follower Robot
+# Line Following Robot
 
 My first autonomous robot project. Built to understand how sensors, 
 microcontrollers, and basic control logic work together.
